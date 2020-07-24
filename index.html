@@ -40,12 +40,10 @@
 			var n = 0;
 			var m = 0;
 			var p = 0;
-			var num1 = 0;
-			var num2 = 0;
 			$("button").click(function(){
 				var all = $(this).attr('id');
 				if(all<10 && n==0 && m==0 && p==0){
-					num1 = all;
+					var num1 = all;
 					$("p").append(all);
 					n = 1;
 				}
@@ -69,7 +67,7 @@
 					alert("Feature under development");
 				}
 				else if(all<10 && n==1 && m==1 && p==0){
-					num2 = all;
+					var num2 = all;
 					$("p").append(all);
 					p = 1;
 				}
@@ -78,15 +76,14 @@
 					$("p").append(all);
 				}
 				else if(all=="eq" && n==1 && m==1 && p==1){
-					var ans;
 					if(operator == "add")
-						ans = num1 + num2;
+						var ans = num1 + num2;
 					else if(operator == "sub")
-						ans = num1 - num2;
+						var ans = num1 - num2;
 					else if(operator == "mul")
-						ans = num1 * num2;
+						var ans = num1 * num2;
 					else if(operator == "divi")
-						ans = num1 / num2;
+						var ans = num1 / num2;
 					$("p").append(" = " + ans);
 					m = 0;
 				}
