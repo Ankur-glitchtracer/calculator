@@ -76,14 +76,16 @@
 					$("p").append(all);
 				}
 				else if(all=="eq" && n==1 && m==1 && p==1){
+					var nu1 = parseInt(num1);
+					var nu2 = parseInt(num2);
 					if(operator == "add")
-						var ans = num1 + num2;
+						var ans = (nu1+nu2);
 					else if(operator == "sub")
-						var ans = num1 - num2;
+						var ans = (nu1-nu2);
 					else if(operator == "mul")
-						var ans = num1 * num2;
+						var ans = (nu1*nu2);
 					else if(operator == "divi")
-						var ans = num1 / num2;
+						var ans = (nu1/nu2);
 					$("p").append(" = " + ans);
 					m = 0;
 				}
