@@ -42,12 +42,12 @@
 			var p = 0;
 			$("button").click(function(){
 				var all = $(this).attr('id');
-				if(all<10 && n==0 && m==0 && p==0){
+				if((all==1 || all==2 || all==3 || all==4 || all==5 || all==6 || all==7 || all==8 || all==9 || all==0 ) && n==0 && m==0 && p==0){
 					var num1 = all;
 					$("p").append(all);
 					n = 1;
 				}
-				else if(all<10 && n==1 && m==0 && p==0){
+				else if((all==1 || all==2 || all==3 || all==4 || all==5 || all==6 || all==7 || all==8 || all==9 || all==0 ) && n==1 && m==0 && p==0){
 					num1 = "num1" + all;
 					$("p").append(all);
 				}
@@ -66,12 +66,12 @@
 				else if((all=="add" || all=="sub" || all=="mul" || all=="divi" ) && n==1 && m==1 && p==0){
 					alert("Feature under development");
 				}
-				else if(all<10 && n==1 && m==1 && p==0){
+				else if((all==1 || all==2 || all==3 || all==4 || all==5 || all==6 || all==7 || all==8 || all==9 || all==0 ) && n==1 && m==1 && p==0){
 					var num2 = all;
 					$("p").append(all);
 					p = 1;
 				}
-				else if(all<10 && n==1 && m==1 && p==1){
+				else if((all==1 || all==2 || all==3 || all==4 || all==5 || all==6 || all==7 || all==8 || all==9 || all==0 ) && n==1 && m==1 && p==1){
 					num2 = "num2" + all;
 					$("p").append(all);
 				}
