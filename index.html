@@ -43,10 +43,46 @@
 			var num1 = 0;
 			var num2 = 0;
 			$(".num").click(function(){
-				
+				if($(this).attr('id')<10 && n==0 && m==0 && p==0){
 					num1 = $(this).attr('id');
 					$("p").append($(this).attr('id'));
-				
+					n = 1;
+				}
+				else if($(this).attr('id')<10 && n==1 && m==0 && p==0){
+					num1 = "num1" + $(this).attr('id');
+					$("p").append($(this).attr('id'));
+				}
+				else if($(this)attr('id')=="op" && n==1 && m==0 && p==0){
+					var operator = $(this)attr('id');
+					$("p").append(operator);
+					m = 1;
+				}
+				else if($(this)attr('id')=="op" && n==1 && m==1 && p==0){
+					alert("Feature under development");
+				}
+				else if($(this).attr('id')<10 && n==1 && m==1 && p==0){
+					num2 = $(this).attr('id');
+					$("p").append($(this).attr('id'));
+					p = 1;
+				}
+				else if($(this).attr('id')<10 && n==1 && m==1 && p==1){
+					num2 = "num2" + $(this).attr('id');
+					$("p").append($(this).attr('id'));
+				}
+				else if($(this).attr('id')=="eq" && n==1 && m==1 && p==1){
+					var ans;
+					var nu1 = parseInt(num1);
+					var nu2 = parseInt(num2);
+					if(operator == "+")
+						ans = nu1 + nu2;
+					else if(operator == "-")
+						ans = nu1 - nu2;
+					else if(operator == "x")
+						ans = nu1 * nu2;
+					else
+						ans = nu1 / nu2;
+					$("p").append($(this).attr('id') + ans);
+				}
 			});
 		</script>
 	</body>
