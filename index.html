@@ -3,6 +3,7 @@
 		<title>Calculator</title>
 		<link rel="stylesheet" type="text/css" href="bootstrap.css" />
 		<link rel="stylesheet" type="text/css" href="styles.css" />
+		<script src="https://unpkg.com/mathjs@7.1.0/dist/math.js"></script>
 		<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 	</head>
 	<body>
@@ -78,13 +79,13 @@
 				else if(all=="eq" && n==1 && m==1 && p==1){
 					var ans;
 					if(operator == "add")
-						ans = num1 + num2;
+						ans = math.chain(num1).add(num2).done();
 					else if(operator == "sub")
-						ans = num1 - num2;
+						ans = math.chain(num1).subtract(num2).done();
 					else if(operator == "mul")
-						ans = num1 * num2;
+						ans = math.chain(num1).multiply(num2).done();
 					else
-						ans = num1 / num2;
+						ans = math.chain(num1).divide(num2).done();
 					$("p").append(" = ");
 					$("p").append(ans);
 					m = 0;
