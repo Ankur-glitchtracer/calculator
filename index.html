@@ -79,13 +79,13 @@
 				else if(all=="eq" && n==1 && m==1 && p==1){
 					var ans;
 					if(operator == "add")
-						ans = math.chain(num1).add(num2).done();
+						ans = math.chain(num1).add(num2).multiply(1).done();
 					else if(operator == "sub")
-						ans = math.chain(num1).subtract(num2).done();
+						ans = math.chain(num1).subtract(num2).multiply(1).done();
 					else if(operator == "mul")
-						ans = math.chain(num1).multiply(num2).done();
+						ans = math.chain(num1).multiply(num2).multiply(1).done();
 					else
-						ans = math.chain(num1).divide(num2).done();
+						ans = math.chain(num1).divide(num2).multiply(1).done();
 					$("p").append(" = ");
 					$("p").append(ans);
 					m = 0;
