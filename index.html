@@ -25,7 +25,7 @@
 					<button type="button" id="9" class="btnr btn num btn-outline-dark">9</button>
 
 					<button type="button" id="0" class="btnr btn num btn-outline-dark">0</button>
-					<button type="button" id="del" class="btnr btn btn-outline-dark">Del</button>
+					<button type="button" id="AC" class="btnr btn btn-outline-dark">AC</button>
 					<button type="button" id="add" class="btnr op btn btn-outline-dark">+</button>
 					<button type="button" id="sub" class="btnr op btn btn-outline-dark">-</button>
 					<button type="button" id="mul" class="btnr op btn btn-outline-dark">x</button>
@@ -55,7 +55,14 @@
 				}
 				else if((all=="add" || all=="sub" || all=="mul" || all=="div" ) && n==1 && m==0 && p==0){
 					var operator = all;
-					$("p").append(all);
+					if(operator == "add")
+						$("p").append(" + ");
+					else if(operator == "sub")
+						$("p").append(" - ");
+					else if(operator == "mul")
+						$("p").append(" x ");
+					else
+						$("p").append(" / ");
 					m = 1;
 				}
 				else if((all=="add" || all=="sub" || all=="mul" || all=="div" ) && n==1 && m==1 && p==0){
@@ -82,7 +89,7 @@
 						ans = nu1 * nu2;
 					else
 						ans = nu1 / nu2;
-					$("p").append(all + ans);
+					$("p").append(" = " + ans);
 					m = 0;
 				}
 				else{
